@@ -1,0 +1,135 @@
+
+<main class="portfolio">
+
+  <!-- LEFT SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="profile-avatar">
+      🎀
+    </div>
+
+    <p class="mini-title">♡ HELLO, LOVELY! ♡</p>
+
+    <h1>{{ fullName }}</h1>
+
+    <p class="role">Aspiring Web Developer</p>
+
+    <div class="sidebar-divider">✿ ♡ ✿</div>
+
+    <div class="contact-info">
+      <h3>LET'S CONNECT</h3>
+
+      <p>📍 {{ location }}</p>
+      <p>♡ {{ phone }}</p>
+      <a [href]="'mailto:' + email">✉ {{ email }}</a>
+    </div>
+
+    <div class="sidebar-footer">
+      <p>made with love</p>
+      <span>୨୧ ♡ ୨୧</span>
+    </div>
+
+  </aside>
+
+
+  <!-- RIGHT CONTENT -->
+  <div class="main-content">
+
+    <!-- Welcome -->
+    <header class="welcome">
+      <div>
+        <p class="eyebrow">✿ A LITTLE INTRODUCTION ✿</p>
+        <h2>Welcome to my<br>
+          <span>little world!</span>
+        </h2>
+        <p>
+          Learning, growing, and creating beautiful things
+          one line of code at a time. ♡
+        </p>
+      </div>
+
+      <div class="welcome-decoration">🌷</div>
+    </header>
+
+
+    <!-- About -->
+    <section class="content-card">
+      <div class="card-heading">
+        <span>01.</span>
+        <h2>About Me</h2>
+        <span class="heart">♡</span>
+      </div>
+
+      <p>{{ profile }}</p>
+
+      <div class="about-note">
+        ✨ Always curious, always learning, always dreaming.
+      </div>
+
+      <app-profile-card></app-profile-card>
+    </section>
+
+
+    <!-- Skills -->
+    <section class="content-card">
+      <div class="card-heading">
+        <span>02.</span>
+        <h2>My Skills</h2>
+        <span class="heart">♡</span>
+      </div>
+
+      <p class="section-description">
+        A few little things I've learned along my journey.
+      </p>
+
+      <div class="skills-grid">
+        @for (skill of skills; track skill) {
+          <div class="skill-card">
+            <span>♡</span>
+            {{ skill }}
+          </div>
+        }
+      </div>
+    </section>
+
+
+    <!-- Personal Quote -->
+    <section class="quote-card">
+      <span class="quote-decoration">୨୧</span>
+
+      <h2>My Little Reminder</h2>
+
+      <p>
+        "Believe in yourself, embrace every little progress,
+        and never stop chasing your dreams."
+      </p>
+
+      <span class="quote-decoration">♡</span>
+    </section>
+
+
+    <!-- Interaction -->
+    <section class="content-card interaction">
+      <div class="card-heading">
+        <span>03.</span>
+        <h2>A Little Surprise</h2>
+        <span class="heart">♡</span>
+      </div>
+
+      <p>{{ message }}</p>
+
+      <button (click)="showMessage()">
+        Open a little magic 🎀
+      </button>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+      <p>୨୧ Thank you for visiting my little world ୨୧</p>
+      <span>♡ made with love & a little sparkle ♡</span>
+    </footer>
+
+  </div>
+
+</main>
